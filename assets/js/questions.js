@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: 'What was the capital of Brazil before the current capital?',
+        question: 'What was the capital of Brazil before the current one?',
         answers: [
             { text: 'Rio de Janeiro', correct: true },
             { text: 'Salvador', correct: false },
