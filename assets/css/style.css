@@ -6,6 +6,7 @@
 
 body {
     margin-top: 5%;
+    margin-bottom: 5%;
     background-color: #41B3A2;    
     font-size: 200%;
     text-align: center;
@@ -20,12 +21,26 @@ span {
     color: #ffffff;
 }
 
+.btn-option {
+    background-color: #41B3A2;
+    font-size: 80%;
+    border: none;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.btn-option:hover {
+    color: #FFB357;
+}
+
 #right {
     color: #FFB357;
+    font-family: 'Bebas Neue', cursive;
 }
 
 #wrong {
     color: #ec6578;
+    font-family: 'Bebas Neue', cursive;
 }
 
 #start, #finish, #restart {
