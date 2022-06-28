@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,36 +11,53 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&display=swap"
+        rel="stylesheet">
+
     <title>Parrot Talk</title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon-32x32.png">
 </head>
+
 <body>
-    
-    <div id="logo">
-        <img class="parrot-logo" src="assets/images/parrot_logo.png" alt="parrot talk logo">
+    <div clas="main-container">
+        
+        <div id="logo">
+            <img class="parrot-logo" src="assets/images/parrot_logo.png" alt="parrot talk logo">
+        </div>
+
+        <div id="hello">
+            <h2>Let's check how much you know about <span>Brazil</span></h2>
+        </div>
+
+        <div id="question-answer-container" class="hide">
+            <div id="question" class="questions">
+                <h3 id="question-text">What was the capital of Brazil before the corrent one?</h3>
+            </div>
+            
+            <div id="options" class="answer-options">
+                <button id="option-1" class="btn btn-option"></button>
+                <br>
+                <button id="option-2" class="btn btn-option"></button>
+                <br>
+                <button id="option-3" class="btn btn-option"></button>
+                <br>
+                <button id="option-4" class="btn btn-option"></button>
+
+            </div>
+
+        </div>
+
+        <div id="start-btn">
+            <button id="start">start quiz</button>
+        </div>
+
+        <div id="answer-option" class="hide">
+
+        </div>
     </div>
-
-    <div id="hello">
-        <h2>Let's check how much you know about <span>Brazil</span></h2>
-    </div>
-
-    <div id="start-btn">
-        <button id="start">start quiz</button>
-    </div>
-
-    <div id="question" class="hide">
-
-    </div>
-    
-
-    <div id="answer-option" class="hide">
-
-    </div>
-
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>
 </body>
+
 </html>
