@@ -20,7 +20,7 @@ span {
     color: #ffffff;
 }
 
-#start {
+#start, #finish, #restart {
     font-size: 90%;
     font-family: 'Bebas Neue', cursive;
     border-radius: 25px;
@@ -30,7 +30,7 @@ span {
     border: none;
 }
 
-#start:hover {
+#start:hover, #finish:hover, #restart:hover {
     background-color: #ffffff;
     color: #FFB357;
 }
