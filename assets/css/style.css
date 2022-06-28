@@ -20,6 +20,14 @@ span {
     color: #ffffff;
 }
 
+#right {
+    color: #FFB357;
+}
+
+#wrong {
+    color: #ec6578;
+}
+
 #start, #finish, #restart {
     font-size: 90%;
     font-family: 'Bebas Neue', cursive;
