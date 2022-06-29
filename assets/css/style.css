@@ -5,12 +5,14 @@
 }
 
 body {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    /** margin-top: 5%;
+    margin-bottom: 5%; **/
     background-color: #41B3A2;    
     font-size: 2.4vw;
     text-align: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
 }
