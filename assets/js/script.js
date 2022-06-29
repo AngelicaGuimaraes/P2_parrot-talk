@@ -9,5 +9,7 @@ const questionText = document.getElementById("question-text");
 const optionsButtons = document.getElementById("options-buttons");
 const answerInfo = document.getElementById("answer-info");
 const infoText = document.getElementById("info");
+const quizFeedback = document.getElementById("quiz-feedback");
+const feedbackText = document.getElementById("feedback-text");
 const scoreFeedback = document.getElementById("score-feedback");
-const 
+const restartText = document.getElementById("restart-text");
