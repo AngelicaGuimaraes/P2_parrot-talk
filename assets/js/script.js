@@ -1,12 +1,13 @@
     // define variables to select elements
 
 const startButton = document.getElementById("start");
+const nextButton = document.getElementById("next");
 const finishButton = document.getElementById("finish");
 const restartButton = document.getElementById("restart");
 const helloText = document.getElementById("hello");
 const questionAnswerContainer = document.getElementById("question-answer-container");
-const questionText = document.getElementById("question-text");
-const optionsButtons = document.getElementById("options-buttons");
+const questionElement = document.getElementById("question-text");
+const answerOptionsButtons = document.getElementById("options-buttons");
 const scoreArea = document.getElementById("score-area");
 const answerInfo = document.getElementById("answer-info");
 const infoText = document.getElementById("info");
@@ -17,38 +18,53 @@ const restartText = document.getElementById("restart-text");
 
     // define variables to drive quiz
 
-/**
- *  provides an index number for the current question
- */
-let currentQuestion;
+let shuffledQuestions;
+let currentQuestionIndex;
+
+
  
     // event listeners
 
 startButton.addEventListener('click', startQuiz);
-restartButton.addEventListener('click', startQuiz);
+// restartButton.addEventListener('click', startQuiz);
 
     // functions
 
-/**
- * hides the start button and intro text, and displays the quiz
- */
- function startQuiz() {
-    currentQuestion = 0;
+function startQuiz() {
+    console.log('Started');
+    currentQuestionIndex = 0;
     startButton.classList.add('hide');
     helloText.classList.add('hide');
     questionAnswerContainer.classList.remove('hide');
-    scoreArea.classList.remove('hide');
-    document.getElementById('right').textContent = 0;
-    document.getElementById('wrong').textContent = 0;
-    displayNextQuestion();
+    // scoreArea.classList.remove('hide');
+    // document.getElementById('right').textContent = 0;
+    // document.getElementById('wrong').textContent = 0;
+    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    setNextQuestion();
 }
 
-function nextQuestion() {
-
+function setNextQuestion() {
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
 
 }
 
 function answerQuestion() {
 
     
+}
+
+function showQuestion(question) {
+    questionElement.innerText = question.question;
+    question.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add("btn");
+        button.addEventListener('click', selectAnswer);
+        answerOptionsButtons.appendChild(button);
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        
+    })
+
 }
