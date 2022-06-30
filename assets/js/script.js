@@ -1,4 +1,4 @@
-    // define variables to select elements
+// define variables to select elements
 
 const startButton = document.getElementById("start");
 const nextButton = document.getElementById("next");
@@ -16,19 +16,19 @@ const feedbackText = document.getElementById("feedback-text");
 const scoreFeedback = document.getElementById("score-feedback");
 const restartText = document.getElementById("restart-text");
 
-    // define variables to drive quiz
+// define variables to drive quiz
 
 let shuffledQuestions;
 let currentQuestionIndex;
 
 
- 
-    // event listeners
+
+// event listeners
 
 startButton.addEventListener('click', startQuiz);
 // restartButton.addEventListener('click', startQuiz);
 
-    // functions
+// functions
 
 function startQuiz() {
     console.log('Started');
@@ -45,12 +45,6 @@ function startQuiz() {
 
 function setNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-
-}
-
-function answerQuestion() {
-
-    
 }
 
 function showQuestion(question) {
@@ -59,24 +53,42 @@ function showQuestion(question) {
         const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add("btn-option");
-        button.addEventListener('click', selectAnswer);
-        answerOptionsButtons.appendChild(button);
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
+        button.addEventListener('click', selectAnswer);
+        answerOptionsButtons.appendChild(button);        
     })
 }
 
-function checkAnswer(event) {
-    const selectedAnswer = event.target;
-    const correct = selectedAnswer.dataset.correct;
-    setFeedback(selectedAnswer, correct);
+function resetState() {
+    clearStatusClass(document.body)
+    nextButton.classList.add('hide')
+    while (answerOptionsButtons.firstChild) {
+        answerOptionsButtons.removeChild(answerOptionsButtons.firstChild)
+    }
+}
+
+function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+}
+
+function selectAnswer(e) {
+    const selectedButton = e.target
+    const correct = selectedButton.dataset.correct
+    setStatusClass(document.body, correct)
     Array.from(answerOptionsButtons.children).forEach(button => {
-        setFeedback(button, button.dataset.correct);
-    });
-    // conditional (ternary) operator: if the length of the shuffledQuestions array is greater than the currentQuestionIndex (i.e., if there are unused questions remaining), then remove the 'hide' class from the Next button so that the button displays to the user; otherwise, run the endQuiz function
-    shuffledQuestions.length > currentQuestionIndex ? nextButton.classList.remove('hide') : endQuiz();
-    // conditional (ternary) operator: if the correct answer has been selected, run the incrementCorrect function; otherwise, run the incrementIncorrect function
-    correct ? incrementCorrect() : incrementIncorrect();
-    showExtraInfo(shuffledQuestions[currentQuestionIndex-1]);
+        setStatusClass(button, button.dataset.correct)
+    })
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide')
+    } else {
+        startButton.innerText = 'Restart'
+        startButton.classList.remove('hide')
+    }
+}
+
+function answerQuestion() {
+
 }
