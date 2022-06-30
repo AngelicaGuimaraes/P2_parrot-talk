@@ -58,13 +58,25 @@ function showQuestion(question) {
     question.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
-        button.classList.add("btn");
+        button.classList.add("btn-option");
         button.addEventListener('click', selectAnswer);
         answerOptionsButtons.appendChild(button);
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
-        
     })
+}
 
+function checkAnswer(event) {
+    const selectedAnswer = event.target;
+    const correct = selectedAnswer.dataset.correct;
+    setFeedback(selectedAnswer, correct);
+    Array.from(answerOptionsButtons.children).forEach(button => {
+        setFeedback(button, button.dataset.correct);
+    });
+    // conditional (ternary) operator: if the length of the shuffledQuestions array is greater than the currentQuestionIndex (i.e., if there are unused questions remaining), then remove the 'hide' class from the Next button so that the button displays to the user; otherwise, run the endQuiz function
+    shuffledQuestions.length > currentQuestionIndex ? nextButton.classList.remove('hide') : endQuiz();
+    // conditional (ternary) operator: if the correct answer has been selected, run the incrementCorrect function; otherwise, run the incrementIncorrect function
+    correct ? incrementCorrect() : incrementIncorrect();
+    showExtraInfo(shuffledQuestions[currentQuestionIndex-1]);
 }
