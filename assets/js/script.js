@@ -23,6 +23,7 @@ const answer2 = document.getElementById("btn2");
 
 let shuffledQuestions;
 let currentQuestionIndex;
+let score;
 
 
 
@@ -57,5 +58,5 @@ function setNextAnswers() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
-    answer1.innerText = 
+    
 }
