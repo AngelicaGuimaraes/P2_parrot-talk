@@ -15,6 +15,9 @@ const quizFeedback = document.getElementById("quiz-feedback");
 const feedbackText = document.getElementById("feedback-text");
 const scoreFeedback = document.getElementById("score-feedback");
 const restartText = document.getElementById("restart-text");
+const answer1 = document.getElementById("btn1");
+const answer2 = document.getElementById("btn2");
+
 
 // define variables to drive quiz
 
@@ -41,54 +44,18 @@ function startQuiz() {
     // document.getElementById('wrong').textContent = 0;
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     setNextQuestion();
+    setNextAnswers();
 }
 
 function setNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 }
 
+function setNextAnswers() {
+
+}
+
 function showQuestion(question) {
     questionElement.innerText = question.question;
-    question.answers.forEach(answer => {
-        const button = document.createElement('button');
-        button.innerText = answer.text;
-        button.classList.add("btn-option");
-        if (answer.correct) {
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener('click', selectAnswer);
-        answerOptionsButtons.appendChild(button);        
-    })
-}
-
-function resetState() {
-    clearStatusClass(document.body)
-    nextButton.classList.add('hide')
-    while (answerOptionsButtons.firstChild) {
-        answerOptionsButtons.removeChild(answerOptionsButtons.firstChild)
-    }
-}
-
-function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
-}
-
-function selectAnswer(e) {
-    const selectedButton = e.target
-    const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
-    Array.from(answerOptionsButtons.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide')
-    } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
-    }
-}
-
-function answerQuestion() {
-
+    answer1.innerText = 
 }
