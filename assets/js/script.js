@@ -17,6 +17,8 @@ const scoreFeedback = document.getElementById("score-feedback");
 const restartText = document.getElementById("restart-text");
 const answer1 = document.getElementById("btn1");
 const answer2 = document.getElementById("btn2");
+const answer3 = document.getElementById("btn3");
+const answer4 = document.getElementById("btn4");
 
 
 // define variables to drive quiz
@@ -40,23 +42,28 @@ function startQuiz() {
     startButton.classList.add('hide');
     helloText.classList.add('hide');
     questionAnswerContainer.classList.remove('hide');
-    // scoreArea.classList.remove('hide');
-    // document.getElementById('right').textContent = 0;
-    // document.getElementById('wrong').textContent = 0;
+    scoreArea.classList.remove('hide');
+    document.getElementById('right').textContent = 0;
+    document.getElementById('wrong').textContent = 0;
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     setNextQuestion();
-    setNextAnswers();
 }
 
 function setNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-}
-
-function setNextAnswers() {
-
+    /** answer1.innerHTML = questions(shuffledQuestions[currentQuestionIndex]).answers[0].text;
+    answer2.innerHTML = questions(shuffledQuestions[currentQuestionIndex]).answers[1].text;
+    answer3.innerHTML = questions(shuffledQuestions[currentQuestionIndex]).answers[2].text;
+    answer4.innerHTML = questions(shuffledQuestions[currentQuestionIndex]).answers[3].text; **/
 }
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
     
 }
+
+function showAnswers() {
+     
+}
+
+console.log(answer1.innerHTML);
