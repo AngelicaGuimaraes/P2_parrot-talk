@@ -48,7 +48,6 @@ function startQuiz() {
     document.getElementById('right').textContent = 0;
     document.getElementById('wrong').textContent = 0;
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
-    currentQuestionIndex = 0;
     displayNextQuestion();
 }
 
