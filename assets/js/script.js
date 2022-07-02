@@ -25,16 +25,18 @@ const answer4 = document.getElementById("btn4");
 
 let shuffledQuestions;
 let currentQuestionIndex;
-let score;
+let score = 0;
+let i = 0;
 
 
 
 // event listeners
 
 startButton.addEventListener('click', startQuiz);
-// restartButton.addEventListener('click', startQuiz);
+restartButton.addEventListener('click', startQuiz);
+nextButton.addEventListener('click', displayNextQuestion);
 
-// functions
+// functions to start quiz
 
 function startQuiz() {
     console.log('Started');
@@ -45,25 +47,45 @@ function startQuiz() {
     scoreArea.classList.remove('hide');
     document.getElementById('right').textContent = 0;
     document.getElementById('wrong').textContent = 0;
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
-    setNextQuestion();
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    currentQuestionIndex = 0;
+    displayNextQuestion();
 }
 
-function setNextQuestion() {
+//function to display questions
+
+/**
+ * removes the old content from the quiz area, selects the following question, then increments the current question index by 1
+ */
+function displayNextQuestion() {
+    clearQuizArea();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-    /** answer1.innerHTML = questions(shuffledQuestions[currentQuestionIndex]).answers[0].text;
-    answer2.innerHTML = questions(shuffledQuestions[currentQuestionIndex]).answers[1].text;
-    answer3.innerHTML = questions(shuffledQuestions[currentQuestionIndex]).answers[2].text;
-    answer4.innerHTML = questions(shuffledQuestions[currentQuestionIndex]).answers[3].text; **/
+    currentQuestionIndex++;
 }
 
-function showQuestion(question) {
+/**
+ * removes the Next button, extra information and old answer buttons from the quiz area
+ */
+function clearQuizArea() {
+    nextButton.classList.add('hide');
+    extraInfo.classList.add('hide');
+    answerOptionsButtons.innerHTML = '';
+}
+
+/**
+ * displays the next question and creates new answer buttons for it
+ */
+ function showQuestion(question) {
     questionElement.innerText = question.question;
-    
+    // for each possible answer, creates a button and sets its content to the answer text, then adds the button to the answer-buttons div in the HTML
+    question.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.textContent = answer.text;
+        answerOptionsButtons.appendChild(button);
+        button.addEventListener('click', checkAnswer);
+        // marks the correct answer as correct in the HTML
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+    });
 }
-
-function showAnswers() {
-     
-}
-
-console.log(answer1.innerHTML);
