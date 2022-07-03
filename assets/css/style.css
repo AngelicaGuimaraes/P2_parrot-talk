@@ -41,6 +41,12 @@ span {
     color: #FFB357;
 }
 
+#text-question {
+    max-width: 80vw;
+    text-align: center;
+    margin: 0;
+}
+
 #right {
     color: #FFB357;
     font-family: 'Bebas Neue', cursive;
