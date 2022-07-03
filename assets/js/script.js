@@ -15,10 +15,6 @@ const quizFeedback = document.getElementById("quiz-feedback");
 const feedbackText = document.getElementById("feedback-text");
 const scoreFeedback = document.getElementById("score-feedback");
 const restartText = document.getElementById("restart-text");
-// const answer1 = document.getElementById("btn1");
-// const answer2 = document.getElementById("btn2");
-// const answer3 = document.getElementById("btn3");
-// const answer4 = document.getElementById("btn4");
 
 
 // define variables to drive quiz
@@ -31,7 +27,10 @@ let score = 0;
 
 startButton.addEventListener('click', startQuiz);
 //restartButton.addEventListener('click', startQuiz);
-//nextButton.addEventListener('click', displayNextQuestion);
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++;
+    displayNextQuestion();
+});
 
 // functions to start quiz
 
