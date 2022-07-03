@@ -76,7 +76,7 @@ function showQuestion(question) {
     question.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
-        button.classList.add("btn-option");
+        button.classList.add('btn-option');
         answerOptionsButtons.appendChild(button);
         button.addEventListener('click', selectAnswer);
         if (answer.correct) {
