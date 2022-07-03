@@ -55,7 +55,7 @@ function startQuiz() {
 function displayNextQuestion() {
     clearQuizArea();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-    currentQuestionIndex++;
+    //currentQuestionIndex++;
 }
 
 /**

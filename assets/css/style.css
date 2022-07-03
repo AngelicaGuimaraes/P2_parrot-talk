@@ -18,7 +18,8 @@ body {
 }
 
 .parrot-logo {
-   width: 30%; 
+   width: 25vw; 
+   height: auto;
 }
 
 span {
@@ -29,12 +30,15 @@ span {
     display: none;
 }
 .btn-option {
-    background-color: #41B3A2;
+    background-color: #ffffff;
     font-size: 80%;
     border: none;
+    border-radius: 25px;
     font-weight: bold;
-    color: #ffffff;
-    width: 60vw;
+    color: #41B3A2;
+    width: 15vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
 .btn-option:hover {
@@ -46,7 +50,7 @@ div .correct {
 }
 
 div .wrong {
-    color: #ffffff;
+    color: #ec6578;
 }
 
 #text-question {
