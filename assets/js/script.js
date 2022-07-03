@@ -85,6 +85,29 @@ function showQuestion(question) {
     });
 }
 
+/**
+ * checks whether the selected answer is correct, chooses whether to increment the score or the number of incorrect answers and calls the function to display extra info about all possible answers
+ */
 function selectAnswer(event) {
+    const selectedButton = event.target;
+    const correct = selectedButton.dataset.correct;
+    setStatusClass(document.body, correct);
+    Array.from(answerOptionsButtons.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    });
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide');
+    } else {
+        startButton.innerText = 'Restart';
+        startButton.classList.remove('hide');
+    }
+}
 
+function setStatusClass(element, correct) {
+    clearStatusClass(element);
+    if (correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('wrong');
+    }
 }
