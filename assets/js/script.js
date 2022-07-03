@@ -15,10 +15,10 @@ const quizFeedback = document.getElementById("quiz-feedback");
 const feedbackText = document.getElementById("feedback-text");
 const scoreFeedback = document.getElementById("score-feedback");
 const restartText = document.getElementById("restart-text");
-const answer1 = document.getElementById("btn1");
-const answer2 = document.getElementById("btn2");
-const answer3 = document.getElementById("btn3");
-const answer4 = document.getElementById("btn4");
+// const answer1 = document.getElementById("btn1");
+// const answer2 = document.getElementById("btn2");
+// const answer3 = document.getElementById("btn3");
+// const answer4 = document.getElementById("btn4");
 
 
 // define variables to drive quiz
@@ -42,8 +42,8 @@ function startQuiz() {
     helloText.classList.add('hide');
     questionAnswerContainer.classList.remove('hide');
     scoreArea.classList.remove('hide');
-    document.getElementById('right').textContent = 0;
-    document.getElementById('wrong').textContent = 0;
+    //document.getElementById('right').textContent = 0;
+    //document.getElementById('wrong').textContent = 0;
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     displayNextQuestion();
 }
@@ -64,14 +64,14 @@ function displayNextQuestion() {
  */
 function clearQuizArea() {
     nextButton.classList.add('hide');
-    extraInfo.classList.add('hide');
+    infoText.classList.add('hide');
     answerOptionsButtons.innerHTML = '';
 }
 
 /**
  * displays the next question and creates new answer buttons for it
  */
- function showQuestion(question) {
+function showQuestion(question) {
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
         const button = document.createElement('button');
@@ -79,9 +79,12 @@ function clearQuizArea() {
         button.classList.add("btn-option");
         answerOptionsButtons.appendChild(button);
         button.addEventListener('click', selectAnswer);
-        
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
     });
+}
+
+function selectAnswer(event) {
+
 }

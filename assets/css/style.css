@@ -34,6 +34,8 @@ span {
     border: none;
     font-weight: bold;
     color: #ffffff;
+    display: block;
+    width: 100%;
 }
 
 .btn-option:hover {
