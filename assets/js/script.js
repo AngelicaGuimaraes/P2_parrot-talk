@@ -26,15 +26,12 @@ const answer4 = document.getElementById("btn4");
 let shuffledQuestions;
 let currentQuestionIndex;
 let score = 0;
-let i = 0;
-
-
 
 // event listeners
 
 startButton.addEventListener('click', startQuiz);
-restartButton.addEventListener('click', startQuiz);
-nextButton.addEventListener('click', displayNextQuestion);
+//restartButton.addEventListener('click', startQuiz);
+//nextButton.addEventListener('click', displayNextQuestion);
 
 // functions to start quiz
 
@@ -76,13 +73,13 @@ function clearQuizArea() {
  */
  function showQuestion(question) {
     questionElement.innerText = question.question;
-    // for each possible answer, creates a button and sets its content to the answer text, then adds the button to the answer-buttons div in the HTML
     question.answers.forEach(answer => {
         const button = document.createElement('button');
-        button.textContent = answer.text;
+        button.innerText = answer.text;
+        button.classList.add("btn-option");
         answerOptionsButtons.appendChild(button);
-        button.addEventListener('click', checkAnswer);
-        // marks the correct answer as correct in the HTML
+        button.addEventListener('click', selectAnswer);
+        
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
