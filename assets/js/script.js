@@ -31,18 +31,18 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     displayNextQuestion();
 });
+answerOptionsButtons.addEventListener('click', showAnswerInfo);
 
 // functions to start quiz
 
 function startQuiz() {
-    console.log('Started');
     currentQuestionIndex = 0;
     startButton.classList.add('hide');
     helloText.classList.add('hide');
     questionAnswerContainer.classList.remove('hide');
     scoreArea.classList.remove('hide');
-    //document.getElementById('right').textContent = 0;
-    //document.getElementById('wrong').textContent = 0;
+    document.getElementById('right').textContent = 0;
+    document.getElementById('wrong').textContent = 0;
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     displayNextQuestion();
 }
@@ -64,6 +64,7 @@ function displayNextQuestion() {
 function clearQuizArea() {
     nextButton.classList.add('hide');
     infoText.classList.add('hide');
+    //answerInfo.classList.add('hide');
     answerOptionsButtons.innerHTML = '';
 }
 
@@ -94,12 +95,34 @@ function selectAnswer(event) {
     Array.from(answerOptionsButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     });
+    /**
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
         startButton.innerText = 'Restart';
         startButton.classList.remove('hide');
     }
+    **/
+    shuffledQuestions.length > currentQuestionIndex ? nextButton.classList.remove('hide') : finishQuiz();
+    correct ? addCorrect() : addIncorrect();
+    answerInfo.classList.remove('hide');
+    infoText.classList.remove('hide');
+    showInfoText(shuffledQuestions[currentQuestionIndex]);
+}
+
+function showInfoText(question) {
+    //answerInfo.classList.remove('hide');
+    infoText.innerText = question.info;
+}
+
+function addCorrect() {
+    let oldCorrect = parseInt(document.getElementById('right').innerText);
+    document.getElementById('right').innerText = oldCorrect + 1;
+}
+
+function addIncorrect() {
+    let oldWrong = parseInt(document.getElementById('wrong').innerText);
+    document.getElementById('wrong').innerText = oldWrong + 1;
 }
 
 function setStatusClass(element, correct) {

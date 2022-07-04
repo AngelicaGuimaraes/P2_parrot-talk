@@ -61,12 +61,12 @@ div .wrong {
 }
 
 #right {
-    color: darkgreen;
+    color: #ffffff;
     font-family: 'Bebas Neue', cursive;
 }
 
 #wrong {
-    color: #ec6578;
+    color: #ffffff;
     font-family: 'Bebas Neue', cursive;
 }
 
