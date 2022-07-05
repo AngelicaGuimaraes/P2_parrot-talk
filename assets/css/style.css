@@ -16,7 +16,7 @@ body {
 }
 
 .parrot-logo {
-   width: 25vw; 
+   width: 20vw; 
    height: auto;
 }
 
@@ -35,7 +35,7 @@ span {
     font-weight: bold;
     color: #41B3A2;
     width: 20vw;
-    margin-top: 4%;
+    margin-top: 3%;
     margin-left: 1vw;
     margin-right: 1vw;
     padding-top: 12px;
@@ -60,6 +60,21 @@ div .wrong {
     margin: 0;
 }
 
+
+/**p {
+    max-width: 60vw;
+    text-align: center;
+    margin-right: 0;
+}
+**/
+
+#info {
+    display: block;
+    font-size: 1.4vw;
+    font-weight: bold;
+    margin-top: 3%;
+}
+
 #right {
     color: #ffffff;
     font-family: 'Bebas Neue', cursive;
@@ -71,7 +86,7 @@ div .wrong {
 }
 
 #right-wrong {
-    margin-top: 4%;
+    margin-top: 3%;
     font-size: 80%;
 }
 
@@ -81,7 +96,7 @@ div .wrong {
     border-radius: 25px;
     background-color: #FFB357;
     padding: 12px 16px;
-    margin-top: 4%;
+    margin-top: 3%;
     border: none;
 }
 

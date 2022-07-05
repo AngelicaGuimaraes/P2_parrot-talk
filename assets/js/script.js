@@ -26,7 +26,8 @@ let score = 0;
 // event listeners
 
 startButton.addEventListener('click', startQuiz);
-//restartButton.addEventListener('click', startQuiz);
+restartButton.addEventListener('click', startQuiz);
+finishButton.addEventListener('click', endQuiz);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     displayNextQuestion();
@@ -64,7 +65,7 @@ function displayNextQuestion() {
 function clearQuizArea() {
     nextButton.classList.add('hide');
     infoText.classList.add('hide');
-    //answerInfo.classList.add('hide');
+    answerInfo.classList.add('hide');
     answerOptionsButtons.innerHTML = '';
 }
 
@@ -73,6 +74,7 @@ function clearQuizArea() {
  */
 function showQuestion(question) {
     questionElement.innerText = question.question;
+
     question.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
@@ -137,4 +139,11 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
+}
+
+function finishQuiz() {
+    finishButton.classList.remove('hide');
+    restartButton.classList.remove('hide');
+    finishButton.addEventListener('click', endQuiz);
+    restartButton.addEventListener('click', startQuiz);
 }
