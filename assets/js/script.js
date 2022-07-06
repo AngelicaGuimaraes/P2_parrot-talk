@@ -12,6 +12,7 @@ const scoreArea = document.getElementById("score-area");
 const answerInfo = document.getElementById("answer-info");
 const infoText = document.getElementById("info");
 const youAreRight = document.getElementById('you-are-right');
+const thatWasWrong = document.getElementById('that-was-wrong');
 const quizFeedback = document.getElementById("quiz-feedback");
 const feedbackText = document.getElementById("feedback-text");
 const scoreFeedback = document.getElementById("score-feedback");
@@ -75,6 +76,7 @@ function showQuestion(question) {
     questionElement.innerText = question.question;
     answerOptionsButtons.classList.remove('hide');
     youAreRight.classList.add('hide');
+    thatWasWrong.classList.add('hide');
     question.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
@@ -123,6 +125,7 @@ function addCorrect() {
 function addIncorrect() {
     let oldWrong = parseInt(document.getElementById('wrong').innerText);
     document.getElementById('wrong').innerText = oldWrong + 1;
+    thatWasWrong.classList.remove('hide');
 }
 
 function setStatusClass(element, correct) {
