@@ -60,13 +60,12 @@ div .wrong {
     margin: 0;
 }
 
-
-/**p {
-    max-width: 60vw;
-    text-align: center;
-    margin-right: 0;
+#answer-info {
+    display: flex;
+    justify-content: center;
+    margin-left: 4%;
+    margin-right: 4%;
 }
-**/
 
 #info {
     display: block;
@@ -103,4 +102,11 @@ div .wrong {
 #start:hover, #next:hover, #finish:hover, #restart:hover {
     background-color: #ffffff;
     color: #FFB357;
+}
+
+.questions {
+    display: flex;
+    justify-content: center;
+    margin-left: 4%;
+    margin-right: 4%;
 }

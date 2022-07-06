@@ -26,13 +26,13 @@ let score = 0;
 // event listeners
 
 startButton.addEventListener('click', startQuiz);
-restartButton.addEventListener('click', startQuiz);
-finishButton.addEventListener('click', endQuiz);
+//restartButton.addEventListener('click', startQuiz);
+//finishButton.addEventListener('click', endQuiz);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     displayNextQuestion();
 });
-answerOptionsButtons.addEventListener('click', showAnswerInfo);
+// answerOptionsButtons.addEventListener('click', showAnswerInfo);
 
 // functions to start quiz
 
@@ -84,7 +84,9 @@ function showQuestion(question) {
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
+        // button.removeEventListener('click', once) //Add
     });
+    
 }
 
 /**
@@ -107,14 +109,17 @@ function selectAnswer(event) {
     **/
     shuffledQuestions.length > currentQuestionIndex ? nextButton.classList.remove('hide') : finishQuiz();
     correct ? addCorrect() : addIncorrect();
-    answerInfo.classList.remove('hide');
+    //answerInfo.classList.remove('hide');
     infoText.classList.remove('hide');
+    
     showInfoText(shuffledQuestions[currentQuestionIndex]);
 }
 
 function showInfoText(question) {
-    //answerInfo.classList.remove('hide');
+    answerInfo.classList.remove('hide');
     infoText.innerText = question.info;
+    console.log(question.info);
+    removeEventListener('click', showInfoText);
 }
 
 function addCorrect() {
