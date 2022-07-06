@@ -34,7 +34,6 @@ nextButton.addEventListener('click', () => {
     displayNextQuestion();
     clearShowInfoText();
 });
-// answerOptionsButtons.addEventListener('click', showAnswerInfo);
 
 // functions to start quiz
 
@@ -58,7 +57,6 @@ function startQuiz() {
 function displayNextQuestion() {
     clearQuizArea();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
-    //currentQuestionIndex++;
 }
 
 /**
@@ -67,6 +65,7 @@ function displayNextQuestion() {
 function clearQuizArea() {
     nextButton.classList.add('hide');
     answerOptionsButtons.innerHTML = '';
+    
 }
 
 /**
@@ -75,6 +74,7 @@ function clearQuizArea() {
 function showQuestion(question) {
     questionElement.innerText = question.question;
     answerOptionsButtons.classList.remove('hide');
+    youAreRight.classList.add('hide');
     question.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
@@ -84,9 +84,7 @@ function showQuestion(question) {
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
-        
     });
-
 }
 
 /**
@@ -109,7 +107,7 @@ function selectAnswer(event) {
 function showInfoText(question) {
     infoText.innerText = question.info;
     questionElement.innerHTML = "";
-    
+    //youAreRight.classList.remove('hide');
 }
 
 function clearShowInfoText() {
@@ -119,6 +117,7 @@ function clearShowInfoText() {
 function addCorrect() {
     let oldCorrect = parseInt(document.getElementById('right').innerText);
     document.getElementById('right').innerText = oldCorrect + 1;
+    youAreRight.classList.remove('hide');
 }
 
 function addIncorrect() {
@@ -138,7 +137,6 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
-    
 }
 
 function finishQuiz() {
