@@ -46,6 +46,13 @@ span {
     color: #FFB357;
 }
 
+.questions {
+    display: flex;
+    justify-content: center;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
 div .correct {
     color: darkgreen;
 }
@@ -63,13 +70,13 @@ div .wrong {
 #answer-info {
     display: flex;
     justify-content: center;
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
 #info {
     display: block;
-    font-size: 1.4vw;
+    font-size: 1.8vw;
     font-weight: bold;
     margin-top: 3%;
 }
@@ -104,9 +111,7 @@ div .wrong {
     color: #FFB357;
 }
 
-.questions {
-    display: flex;
-    justify-content: center;
-    margin-left: 4%;
-    margin-right: 4%;
+#that-was-wrong span {
+    color: #ec6578;
+    font-family: 'Bebas Neue', cursive;
 }
