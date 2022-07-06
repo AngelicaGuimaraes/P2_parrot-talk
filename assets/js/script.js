@@ -11,6 +11,7 @@ const answerOptionsButtons = document.getElementById("options-buttons");
 const scoreArea = document.getElementById("score-area");
 const answerInfo = document.getElementById("answer-info");
 const infoText = document.getElementById("info");
+const youAreRight = document.getElementById('you-are-right');
 const quizFeedback = document.getElementById("quiz-feedback");
 const feedbackText = document.getElementById("feedback-text");
 const scoreFeedback = document.getElementById("score-feedback");
@@ -31,6 +32,7 @@ startButton.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     displayNextQuestion();
+    clearShowInfoText();
 });
 // answerOptionsButtons.addEventListener('click', showAnswerInfo);
 
@@ -64,8 +66,6 @@ function displayNextQuestion() {
  */
 function clearQuizArea() {
     nextButton.classList.add('hide');
-    infoText.classList.add('hide');
-    answerInfo.classList.add('hide');
     answerOptionsButtons.innerHTML = '';
 }
 
@@ -74,7 +74,7 @@ function clearQuizArea() {
  */
 function showQuestion(question) {
     questionElement.innerText = question.question;
-
+    answerOptionsButtons.classList.remove('hide');
     question.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
@@ -84,9 +84,9 @@ function showQuestion(question) {
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
-        // button.removeEventListener('click', once) //Add
+        
     });
-    
+
 }
 
 /**
@@ -99,27 +99,21 @@ function selectAnswer(event) {
     Array.from(answerOptionsButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     });
-    /**
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide');
-    } else {
-        startButton.innerText = 'Restart';
-        startButton.classList.remove('hide');
-    }
-    **/
     shuffledQuestions.length > currentQuestionIndex ? nextButton.classList.remove('hide') : finishQuiz();
     correct ? addCorrect() : addIncorrect();
-    //answerInfo.classList.remove('hide');
     infoText.classList.remove('hide');
-    
+    answerOptionsButtons.classList.add('hide');
     showInfoText(shuffledQuestions[currentQuestionIndex]);
 }
 
 function showInfoText(question) {
-    answerInfo.classList.remove('hide');
     infoText.innerText = question.info;
-    console.log(question.info);
-    removeEventListener('click', showInfoText);
+    questionElement.innerHTML = "";
+    
+}
+
+function clearShowInfoText() {
+    infoText.innerHTML = "";
 }
 
 function addCorrect() {
@@ -144,6 +138,7 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
+    
 }
 
 function finishQuiz() {
