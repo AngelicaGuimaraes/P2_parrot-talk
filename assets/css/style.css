@@ -83,17 +83,19 @@ div .wrong {
 
 #right {
     color: #ffffff;
-    font-family: 'Bebas Neue', cursive;
+    /**font-family: 'Bebas Neue', cursive;**/
 }
 
 #wrong {
-    color: #ffffff;
-    font-family: 'Bebas Neue', cursive;
+    color: #ec6578;
+    /**font-family: 'Bebas Neue', cursive;**/
 }
 
 #right-wrong {
     margin-top: 3%;
     font-size: 80%;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
 }
 
 #start, #next, #finish, #restart {
