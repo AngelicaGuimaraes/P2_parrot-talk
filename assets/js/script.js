@@ -109,7 +109,6 @@ function selectAnswer(event) {
 function showInfoText(question) {
     infoText.innerText = question.info;
     questionElement.innerHTML = "";
-    //youAreRight.classList.remove('hide');
 }
 
 function clearShowInfoText() {
