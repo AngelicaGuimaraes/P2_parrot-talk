@@ -13,6 +13,7 @@ const answerInfo = document.getElementById("answer-info");
 const infoText = document.getElementById("info");
 const youAreRight = document.getElementById('you-are-right');
 const thatWasWrong = document.getElementById('that-was-wrong');
+const mainContainer = document.getElementById('main');
 const quizFeedback = document.getElementById("quiz-feedback");
 const feedbackText = document.getElementById("feedback-text");
 const scoreFeedback = document.getElementById("score-feedback");
@@ -28,7 +29,7 @@ let score = 0;
 // event listeners
 
 startButton.addEventListener('click', startQuiz);
-//restartButton.addEventListener('click', startQuiz);
+restartButton.addEventListener('click', startQuiz);
 //finishButton.addEventListener('click', endQuiz);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
@@ -66,7 +67,7 @@ function displayNextQuestion() {
 function clearQuizArea() {
     nextButton.classList.add('hide');
     answerOptionsButtons.innerHTML = '';
-    
+
 }
 
 /**
@@ -103,6 +104,8 @@ function selectAnswer(event) {
     correct ? addCorrect() : addIncorrect();
     infoText.classList.remove('hide');
     answerOptionsButtons.classList.add('hide');
+    restartButton.classList.add('hide');
+    finishButton.classList.add('hide');
     showInfoText(shuffledQuestions[currentQuestionIndex]);
 }
 
@@ -139,11 +142,33 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
+    finishButton.classList.remove('hide');
 }
 
 function finishQuiz() {
+    mainContainer.classList.add('hide');
     finishButton.classList.remove('hide');
     restartButton.classList.remove('hide');
-    finishButton.addEventListener('click', endQuiz);
+    finishButton.addEventListener('click', showEndPage);
     restartButton.addEventListener('click', startQuiz);
+}
+
+/**
+ * displays quiz end page with user's final score and feedback
+ */
+function showEndPage() {
+    mainContainer.classList.add('hide');
+    finishButton.classList.add('hide');
+    quizFeedback.classList.remove('hide');
+    restartButton.classList.remove('hide');
+    // pulls the final score so that user feedback can be given. Again, the parseInt function is used so that an integer is returned rather than a string
+    const finalScore = parseInt(document.getElementById('right').textContent);
+    // if statement to provide feedback to the user dependent on their score. Template literals (backticks) are used so that the finalScore variable can be included in the string, as well as providing a less error-prone way of including single quotes inside the string
+    if (finalScore > 7) {
+        document.getElementById('score-feedback').textContent = `Congratulations! You scored ${finalScore}. You're an expert!`;
+    } else if (finalScore > 4) {
+        document.getElementById('score-feedback').textContent = `Not bad! You scored ${finalScore}. You have a good level of knowledge!`;
+    } else {
+        document.getElementById('score-feedback').textContent = `You scored ${finalScore}. Want to learn more about women in STEM?`;
+    }
 }

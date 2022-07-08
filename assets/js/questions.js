@@ -37,7 +37,7 @@ const questions = [
             { text: 'Recife', correct: false },
             { text: 'São Paulo', correct: true }
         ],
-        info: '* São Paulo is by far the largest, with a population of around 18,000,000. The capital Brasilia has around two million.'
+        info: '* São Paulo is by far the largest city, with a population of around 18,000,000. The capital Brasilia has around two million.'
     },
     {
         question: 'What is the longest Brazilian river?',

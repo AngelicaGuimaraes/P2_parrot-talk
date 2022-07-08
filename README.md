@@ -1,108 +1,297 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Parrot Talk
 
-Welcome AngelicaGuimaraes,
+![Responsive screenshot](/assets/images/screencapture-responsive.png.jpg)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# The purpose with this project
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Parrot Talk is a quiz game with the purpose of challenging the player to get the most number of right questions out of it, while learning about some curious facts about Brazil. The user interface is kept simple, clean and easy for the player to follow the quiz without having to pay attention to instructions. The questions were chosen in a way so the players will find some of them easy and others not so much, so that instigates the feeling of challenging themselves.
 
-## Gitpod Reminders
+The game has three screens: Start, Game, End.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Target audience: All individuals that want to have fun, take a challenge and learn a bit more about Brazil.
 
-`python3 -m http.server`
+The site has been created for the second milestone project for Code Institute's Diploma in Full Stack Software Development program.
 
-A blue button should appear to click: _Make Public_,
+Required technologies are HTML5, CSS3 and JavaScript.
 
-Another blue button should appear to click: _Open Browser_.
+A live version of the project can be found here - https://angelicaguimaraes.github.io/parrot-talk/
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Table of Content
 
-A blue button should appear to click: _Make Public_,
++ [UX](#ux "UX")
+  + [User Demographic](#user-demographic "User Demographic")
+  + [User Stories](#user-stories "User Stories")
+    + [New Players](#new-players "New Players")
+    + [Old Players](#old-players "Old Players")
+  + [Player Goals](#player-goals "Player")
+  + [Project Requirements](#project-requirements "Project Requirements")
+  + [Design](#design "Design")
+    + [Design Discovery Phase](#design-discovery-phase "Design Discovery Phase")
+    + [Colours](#colours "Colours")
+    + [Typography](#typography "Typography")
+    + [Images](#images "Images")
++ [Features](#features "Features")
+  + [Existing Features](#existing-features "Existing Features")
+    + [Start Screen](#start-screen "Start Screen")
+    + [Game Screen](#game-screen "Game Screen")
+    + [End Screen](#end-screen "End Screen")
+  + [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
++ [Technologies used](#technologies-used "Technologies used")
++ [Testing](#testing "Testing")
+  + [Validator Testing](#validator-testing "Validator Testing")
+  + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
++ [Development and Deployment](#development-and-deployment "Development and Deployment")
++ [Content](#content "Content")
++ [Media](#media "Media")
++ [Credits](#credits "Credits")
 
-Another blue button should appear to click: _Open Browser_.
+## UX
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### User Demographic
 
-To log into the Heroku toolbelt CLI:
+This game is ment for:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+ - All individuals, regarding age, that want to to challenge themselves with a cultural quiz.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### User Stories
 
-------
+The user stories between new and old players differ just slightly since it is a simple game.
 
-## Release History
+#### New players
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+ - I want to try a new quiz.
+ - I want to have fun while playing an interesting quiz.
+ - I want to learn new curiosities about Brazil.
+ - I want to increase the number of right answers every time I play it.
+ - I want to get all 10 questions right.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+#### Old players
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+ - I want to increase the number of my right answers compared to last time I played it.
+ - I want to challenge myself by knowing, by heart, the information about the questions.
+ - I want to get all 10 questions right.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Player goals
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+ - To get all 10 anwers right.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Project Requirements
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+ - To build an interactive front-end site that responds to user actions. The user should engage actively by altering data and how the site displays. The development process needs to be well documented through a version controls system such as GitHub and contain HTML5, CSS3 and JavaScript.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Design
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The design was decided to bring the users into a fun space, where they could feel a bit of the Brazilian atmosphere. 
+It was also decided to keep it as minimalistic as possible with the purpose of minimizing player's distractions.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### Design Discovery Phase
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Canva was used as a tool during brainstorming phase. Some color palettes were tested before the final choice was made but they were chosen based on the parrot logo. Happy and friendly were two keywords used to determine the final design suggestion.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+The game consists of three screens. Start, Game and End. The final version of the wireframe and design are presented below this text.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Start Screen
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![Start Screen](/assets/images/parrot-talk-start.png)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Game Screen
 
-------
+![Game Screen](/assets/images/parrot-talk-questions.png)
 
-## FAQ about the uptime script
+End Screen
 
-**Why have you added this script?**
+![End Screen](/assets/images/readme-images/wireframe-end.jpg)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+#### Colours
 
-**How will this affect me?**
+The colour palette was created using [Coolors](https://coolors.co/).
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![Colour Palette](/assets/images/parrot-talk-color-palette1.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+#### Typography
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+Font chosen for the project is [Balsamiq Sans](https://fonts.google.com/specimen/Balsamiq+Sans?query=balsam)
 
-**So….?**
+#### Images
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+The game does not contain any image elements. The game cards are using fonts from [Font Awesome](https://fontawesome.com/) as face value.
 
-**Can I opt out?**
+[Back to top](#quickmem)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## Features 
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+QuickMem consists of three game screens:
 
-**Anything more?**
+ - Start Screen
+ - Game Screen
+ - End Screen
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+QuickMem is a linear game and when the player presses start the game board is created and shuffled. The player ends up at the end screen at either a ”Win” or a ”Loss”.
 
----
+### Existing Features
 
-Happy coding!
+#### Start Screen
+
+The Start Screen consists of a header and a paragraph that contains the games main title and the rules. Other elements are:
+
+ - Text that tells player to enter name, this is optional
+ - Input field for player name (optional)
+ - Start button that takes the player to the main board and shuffles the deck.
+
+![Start Screen](/assets/images/readme-images/start-screen.png)
+
+#### Game Screen
+
+The game screen has two elements:
+
+ - Timer bar - Counts from 0 to 100 and graphically displays the counting by moving a bar from left to right. The darker colour of the bar makes the timer visible in ”the corner of the eye” of the player and he/she does not have to look away from the game board.
+
+ - Game board - At start 20 cards with symbols are shuffled and distributed across the board. The game starts the moment the game screen is visible to the player.
+
+![Game Screen](/assets/images/readme-images/game-screen.png)
+
+#### End Screen
+
+Quick game is a linear game and all players end up at the end screen either the loose or win. Messages differ depending on win or loss. If a player does not enter a player name the standard player name of the game appears. The end screen displays:
+
+ - Header that tells the player if they won or lost.
+ - Paragraph telling the player how many pairs they were able to match.
+ - Paragraph telling the player how many tries it took to find the pairs.
+ - Paragraph with two different messages depending on win/lose.
+ - Play again button that generates a new game board and shuffles the cards.
+ - Quit button that takes the player to the start screen
+
+![About us Section part 1](/assets/images/readme-images/end-screen.png)
+
+### Features Left to Implement
+
+- Future version of this game will contain database with high scores.
+- Two more game modes, one harder and one easier.
+
+[Back to top](#quickmem)
+
+## Technologies used
+
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/javascript)
+
+## Testing 
+
+- Initial testing showed that the function I used to create the game cards did not get the correct information from my main game array. The cards was not generated properly. I struggled a lot with this and made several attempts to change the information in the array but nothing seemed to work.
+
+  - The solution to this problem was simpler than I first expected. My Array contains the class names of 10 different FontAwesome icons and my function did not generate any inner HTML in the DIV-tags that are the cards. After a change in the function so that it adds a i-tag with a class attribute from the array solved the issue.
+
+- Game Card not responding to clicks.
+
+  - My event listener was not correct and placed outside the function that generates the cards.
+
+- Console log constantly gave an error due ot missing favicon. I figured that this is either connected to the Code Institute template or to GitPod. 
+
+  - I added the favicon from ”Love Maths” and that removed the error. Later I updated with my own favicon.
+
+- Selected cards do not change colour upon clicks
+
+  - I was not able to correctly identify the correct card (div) and it’s inner HTML. The solution was to get the ID of the selected DIV-tag and change the attribute color using this.getAttribute.
+
+- Game cards did not compare correctly. All cards are considered to be a match.
+
+  - When comparing 0 and 1 in the Array with selected cards all were a match. It took me some time to figure out why. After a console.log I noticed that the value of both cards were set to Object. I tried to convert the entries in the Array to strings and strings became identical as well HTMLObject. I resorted to W3 Schools and found an attribute called data- that could be applied with almost any value. I had to go back to the function that generates the board and added the attribute data-id with the same value as the class name of the icons. This value was then pushed in the array of selected cards and the matchmaking worked.
+
+- Upon restart of the game from the End screen or the scenario End Screen - Quit - Start. The game board consisted of 40 cards instead of 20. For each try it added a new set of cards.
+
+  - I wrote a function that clears all inner HTML for the DIV that is the main game board and called that function upon restart and quit.
+
+- The game card are not re-shuffeling when you press Play Again.
+
+  - The line of code that shuffles and creates the variable cardDeck was not placed inside the function that generates the board. When it was moved there the bug was fixed.
+
+- The End Screen flickers when the timer reaches 100.
+
+  - A loop was created due to badly placed console.log and the fact that the timer restarted in the background. Added a stop to the timer at won game and removed the console.log
+
+- If a player wins a game, plays again and looses the messages is still that one of a win.
+  - Made a function that restores the message and cal the function from the Quit and Play again button.
+
+This list contains the major bugs. There has been several smaller ones connected to misspelled syntaxt and such that has been solved in under 1-2 minutes.
+
+### Validator Testing 
+
+- HTML
+  - No errors were returned when passing through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpelikantapeten.github.io%2Fp2-quickmem%2F)
+
+![W3C HTML Validator](/assets/images/readme-images/html-validator.png)
+
+- CSS
+  - No errors were returned when passing through the official [(Jigsaw validator)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpelikantapeten.github.io%2Fp2-quickmem%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+  - CSS validation passes with no errors but contains a warning. The warning indicates that the background colour and font colour of the class ”memory-card” are the same. This is on purpose since the game function to check memory cards depend on colour change. 
+
+![Jigsaw validator](/assets/images/readme-images/css-validator.png)
+
+- JavaScript
+  - No errors or warnings was returned using [(JSHint)](https://jshint.com/) with "New JavaScript features (ES6)" activated in the configuration.
+
+![JSHint](/assets/images/readme-images/jshint-screen.png)
+
+- Lighthouse testing
+
+![Lighthouse testing score](/assets/images/readme-images/lighthouse.png)
+
+### Unfixed Bugs
+
+- Some test players have experienced that card values get "stuck" if you are playing the game to fast. This requires further investigation.
+
+- On screens with a resolution in height of 290px or less the face value (icons) are visible even if a card is not turned.
+
+ [Back to top](#quickmem)
+
+## Development and Deployment
+
+The development environment used for this project was GitPod. To track the development stage and handle version control regular commits and pushes to GitHub has been conducted. The GitPod environment was created using a template provided by Code Institute.
+
+The live version of the project is deployed at GitHub pages.
+
+The procedure for deployment followed the "Creating your site" steps provided in [GitHub Docs.](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+
+1. Log into GitHub.
+2. Locate the GitHub Repository that shall be deployed live.
+3. At the top of the repository, select Settings from the menu items.
+4. Scroll down the Settings page to the ”GitHub Pages" section and click on the ”Check it out here!”
+5. At the ”Source” section choose ”main” as Branch and root as folder and click ”Save”
+6. The website will deploy and the pages refreshes to provide the live link to the project.
+
+The live link can be found here - https://pelikantapeten.github.io/p2-quickmem/
+
+## Content 
+
+- All text content in this game has been produced by the author.
+- Icons [Font Awesome](https://fontawesome.com/)
+
+## Media
+
+Apart from Google Fonts and FontAwesome no external media are used in the game.
+
+## Credits 
+
+### For code inspiration, design inputs, help and advice.
+
+I have consulted numerous websites, individuals and slack channels to get support for the code. No code block is directly copied but some generates from information I gathered from other developers and sites:
+
+ - [Mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for information about Arrays and also identifying bugs.
+ - [Code Institute - Love Running](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode) for inspiration to game footer.
+ - [Code Institute - Love Maths](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode) for inspiration to design of user interface.
+ - [DevelopedByEd](https://developedbyed.com/) that taught me in his vides on how to generate a board of cards and display it as a CSS grid.
+ - [W3 Schools](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) for understanding Event Listeners. 
+ - [W3 Schools](https://www.w3schools.com/w3css/w3css_progressbar.asp) for the developing of my progress bar on the main game screen.
+
+### Acknowledgment
+
+ - [Lauren-Nicole Popich](https://www.linkedin.com/in/lauren-nicole-popich-1ab87539/) My incredible fellow student. Thank you for all discussions, testing, comments, insights and support and leading me out of frustration.
+ - [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/) My fantastic mentor at Code Institute, thank you for your support, feedback and humor.
+
+ And to all the rest of my fellow student that have tested the actual game and provided me with feedback on playability.
+
+ [Am I Responsive](http://ami.responsivedesign.is/) was used to create the image on top of this ReadMe
+
+[Back to top](#quickmem)
