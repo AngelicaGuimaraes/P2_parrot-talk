@@ -1,6 +1,6 @@
 # Parrot Talk
 
-![Responsive screenshot](/assets/images/screencapture-responsive.png.jpg)
+![Responsive screenshot](/assets/images/screencapture-responsive.png)
 
 # The purpose with this project
 
@@ -51,7 +51,7 @@ A live version of the project can be found here - https://angelicaguimaraes.gith
 
 This game is ment for:
 
- - All individuals, regarding age, that want to to challenge themselves with a cultural quiz.
+ - All individuals, regarding age, that want to challenge themselves with a cultural and fun quiz.
 
 ### User Stories
 
@@ -110,45 +110,54 @@ The colour palette was created using [Coolors](https://coolors.co/).
 
 #### Typography
 
-Font chosen for the project is [Balsamiq Sans](https://fonts.google.com/specimen/Balsamiq+Sans?query=balsam)
+Fonts chosen for the project were [Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue?query=bebas) and [Open Sans](https://fonts.google.com/specimen/Open+Sans?query=open).
 
 #### Images
 
-The game does not contain any image elements. The game cards are using fonts from [Font Awesome](https://fontawesome.com/) as face value.
+The logo image was taken from [Flaticon](https://www.flaticon.com/free-icons/parrot).
 
-[Back to top](#quickmem)
+[Back to top](#parrot-talk)
 
 ## Features 
 
-QuickMem consists of three game screens:
+Parrot Talk consists of three game screens:
 
  - Start Screen
  - Game Screen
  - End Screen
 
-QuickMem is a linear game and when the player presses start the game board is created and shuffled. The player ends up at the end screen at either a ”Win” or a ”Loss”.
+Parrot Talk is a linear game and when the player presses start, the game board is created and shuffled. The player ends up at the end screen with the option of finishing the quiz or restarting it.
 
 ### Existing Features
 
 #### Start Screen
 
-The Start Screen consists of a header and a paragraph that contains the games main title and the rules. Other elements are:
+The Start Screen consists of the logo of the quiz, and a paragraph. Other elements are:
 
- - Text that tells player to enter name, this is optional
- - Input field for player name (optional)
- - Start button that takes the player to the main board and shuffles the deck.
+ - Start button that takes the player to the game screen.
 
-![Start Screen](/assets/images/readme-images/start-screen.png)
+![Start Screen](/assets/images/parrot-talk-start.png)
 
 #### Game Screen
 
-The game screen has two elements:
+The game contains:
 
- - Timer bar - Counts from 0 to 100 and graphically displays the counting by moving a bar from left to right. The darker colour of the bar makes the timer visible in ”the corner of the eye” of the player and he/she does not have to look away from the game board.
+ - Parrot Talk Logo.
 
- - Game board - At start 20 cards with symbols are shuffled and distributed across the board. The game starts the moment the game screen is visible to the player.
+ - The question paragraph.
 
-![Game Screen](/assets/images/readme-images/game-screen.png)
+ - Four buttons with the different answer options.
+
+ - The section containing the number of correct and wrong answers.
+
+ - A greeting saying if the player chose the right answer or not.
+
+ - A paragraph containing some information about the right answer that apears when the player clicks the chosen answer button.
+
+ - The next question button that takes the player to the next shuffled question available until it reaches the last question of the list.
+
+![Game Screen 1](/assets/images/screencapture-game-screen1.png)
+![Game Screen 2](/assets/images/screencapture-game-screen2.png)
 
 #### End Screen
 

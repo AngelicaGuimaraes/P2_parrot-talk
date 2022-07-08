@@ -83,7 +83,7 @@ div .wrong {
 }
 
 #right {
-    color: #ffffff;
+    color: #FFB357;
     /**font-family: 'Bebas Neue', cursive;**/
 }
 
@@ -102,7 +102,7 @@ div .wrong {
 
 #start, #next, #finish, #restart {
     font-size: 100%;
-    color: darkslategrey;
+    color: #2f4f4f;
     font-family: 'Bebas Neue', cursive;
     border-radius: 25px;
     background-color: #FFB357;
@@ -126,9 +126,9 @@ div .wrong {
 }
 
 #correct {
-    margin-right: 2%;
+    margin-right: 10%;
 }
 
 #incorrect {
-    margin-left: 2%;
+    margin-left: 10%;
 }
