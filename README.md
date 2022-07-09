@@ -115,6 +115,7 @@ Fonts chosen for the project were [Bebas Neue](https://fonts.google.com/specimen
 #### Images
 
 The logo image was taken from [Flaticon](https://www.flaticon.com/free-icons/parrot).
+The image on top of this ReadMe was created using [Am I Responsive](http://ami.responsivedesign.is/).
 
 [Back to top](#parrot-talk)
 
@@ -140,20 +141,14 @@ The Start Screen consists of the logo of the quiz, and a paragraph. Other elemen
 
 #### Game Screen
 
-The game contains:
+The Game Screen contains:
 
  - Parrot Talk Logo.
-
  - The question paragraph.
-
  - Four buttons with the different answer options.
-
  - The section containing the number of correct and wrong answers.
-
  - A greeting saying if the player chose the right answer or not.
-
  - A paragraph containing some information about the right answer that apears when the player clicks the chosen answer button.
-
  - The next question button that takes the player to the next shuffled question available until it reaches the last question of the list.
 
 ![Game Screen 1](/assets/images/screencapture-game-screen1.png)
@@ -161,23 +156,20 @@ The game contains:
 
 #### End Screen
 
-Quick game is a linear game and all players end up at the end screen either the loose or win. Messages differ depending on win or loss. If a player does not enter a player name the standard player name of the game appears. The end screen displays:
+Parrot Talk quiz is a linear game and all players end up at the end screen either to finish it or restart it. Messages differ depending on how many points the player did. The end screen displays:
 
- - Header that tells the player if they won or lost.
- - Paragraph telling the player how many pairs they were able to match.
- - Paragraph telling the player how many tries it took to find the pairs.
- - Paragraph with two different messages depending on win/lose.
- - Play again button that generates a new game board and shuffles the cards.
- - Quit button that takes the player to the start screen
+ - The Parrot Talk logo.
+ - Paragraph telling the players how many points they made.
+ - Restart Quiz button that generates a new game with the same 10 questions shuffled on a different order.
+ - Finish button that takes the player to the start screen.
 
 ![About us Section part 1](/assets/images/readme-images/end-screen.png)
 
 ### Features Left to Implement
 
-- Future version of this game will contain database with high scores.
-- Two more game modes, one harder and one easier.
+- Different game levels.
 
-[Back to top](#quickmem)
+[Back to top](#parrot-talk)
 
 ## Technologies used
 
@@ -253,7 +245,7 @@ This list contains the major bugs. There has been several smaller ones connected
 
 - On screens with a resolution in height of 290px or less the face value (icons) are visible even if a card is not turned.
 
- [Back to top](#quickmem)
+ [Back to top](#parrot-talk)
 
 ## Development and Deployment
 
@@ -270,16 +262,15 @@ The procedure for deployment followed the "Creating your site" steps provided in
 5. At the ”Source” section choose ”main” as Branch and root as folder and click ”Save”
 6. The website will deploy and the pages refreshes to provide the live link to the project.
 
-The live link can be found here - https://pelikantapeten.github.io/p2-quickmem/
+The live link can be found here - https://angelicaguimaraes.github.io/parrot-talk/
 
 ## Content 
 
 - All text content in this game has been produced by the author.
-- Icons [Font Awesome](https://fontawesome.com/)
 
 ## Media
 
-Apart from Google Fonts and FontAwesome no external media are used in the game.
+Apart from Google Fonts and Flaticon no external media are used in the game.
 
 ## Credits 
 
@@ -296,11 +287,9 @@ I have consulted numerous websites, individuals and slack channels to get suppor
 
 ### Acknowledgment
 
- - [Lauren-Nicole Popich](https://www.linkedin.com/in/lauren-nicole-popich-1ab87539/) My incredible fellow student. Thank you for all discussions, testing, comments, insights and support and leading me out of frustration.
  - [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/) My fantastic mentor at Code Institute, thank you for your support, feedback and humor.
 
  And to all the rest of my fellow student that have tested the actual game and provided me with feedback on playability.
 
- [Am I Responsive](http://ami.responsivedesign.is/) was used to create the image on top of this ReadMe
 
-[Back to top](#quickmem)
+[Back to top](#parrot-talk)
