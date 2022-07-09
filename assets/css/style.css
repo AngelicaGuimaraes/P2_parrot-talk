@@ -6,7 +6,7 @@
 
 body {
     background-color: #41B3A2;
-    color: darkslategrey;  
+    color: darkslategrey;
     font-size: 2.4vw;
     text-align: center;
     display: flex;
@@ -17,8 +17,8 @@ body {
 }
 
 .parrot-logo {
-   width: 20vw; 
-   height: auto;
+    width: 20vw;
+    height: auto;
 }
 
 span {
@@ -28,6 +28,7 @@ span {
 .hide {
     display: none;
 }
+
 .btn-option {
     background-color: #ffffff;
     font-size: 80%;
@@ -100,7 +101,10 @@ div .wrong {
     display: inline;
 }
 
-#start, #next, #finish, #restart {
+#start,
+#next,
+#finish,
+#restart {
     font-size: 100%;
     color: #2f4f4f;
     font-family: 'Bebas Neue', cursive;
@@ -111,7 +115,10 @@ div .wrong {
     border: none;
 }
 
-#start:hover, #next:hover, #finish:hover, #restart:hover {
+#start:hover,
+#next:hover,
+#finish:hover,
+#restart:hover {
     background-color: #ffffff;
     color: #FFB357;
 }
@@ -138,17 +145,47 @@ div .wrong {
 @media screen and (min-width: 480px) and (max-width: 920px) {
 
     .parrot-logo {
-        width: 50vw; 
+        width: 50vw;
         height: auto;
-     }
+    }
 
-     h2 {
+    h2 {
         font-size: 6vw;
         margin: 10% 10%;
-     }
+    }
 
-     #start {
+    #start {
         font-size: 6vw;
         padding: 16px;
-     }
+    }
+
+    .questions {
+        font-size: 4vw;
+        display: flex;
+        justify-content: center;
+        margin: 5% 10% 0% 10%;
+    }
+
+    .btn-option {
+        font-size: 3.5vw;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        color: #41B3A2;
+        width: 50vw;
+        margin-top: 3%;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    #right-wrong {
+        margin-top: 20px;
+        font-size: 4vw;
+        font-weight: bold;
+        font-family: 'Bebas Neue', cursive;
+        display: inline;
 }
+
+@media screen and (min-width: 0px) and (max-width: 480px) {}
