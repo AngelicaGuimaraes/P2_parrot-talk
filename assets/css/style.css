@@ -132,3 +132,23 @@ div .wrong {
 #incorrect {
     margin-left: 10%;
 }
+
+/* media queries */
+
+@media screen and (min-width: 480px) and (max-width: 920px) {
+
+    .parrot-logo {
+        width: 50vw; 
+        height: auto;
+     }
+
+     h2 {
+        font-size: 6vw;
+        margin: 10% 10%;
+     }
+
+     #start {
+        font-size: 6vw;
+        padding: 16px;
+     }
+}
