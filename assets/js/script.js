@@ -1,5 +1,4 @@
 // define variables to select elements
-
 const startButton = document.getElementById("start");
 const nextButton = document.getElementById("next");
 const finishButton = document.getElementById("finish");
@@ -21,16 +20,13 @@ const restartText = document.getElementById("restart-text");
 
 
 // define variables to drive quiz
-
 let shuffledQuestions;
 let currentQuestionIndex;
 let score = 0;
 
 // event listeners
-
 startButton.addEventListener('click', startQuiz);
 restartButton.addEventListener('click', startQuiz);
-//finishButton.addEventListener('click', endQuiz);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     displayNextQuestion();
@@ -38,7 +34,6 @@ nextButton.addEventListener('click', () => {
 });
 
 //function to start quiz
-
 function startQuiz() {
     currentQuestionIndex = 0;
     infoText.innerHTML = "";
@@ -56,7 +51,6 @@ function startQuiz() {
 }
 
 //function to display questions
-
 /**
  * removes the old content from the quiz area, selects the following question, then increments the current question index by 1
  */
@@ -71,7 +65,6 @@ function displayNextQuestion() {
 function clearQuizArea() {
     nextButton.classList.add('hide');
     answerOptionsButtons.innerHTML = '';
-
 }
 
 /**
