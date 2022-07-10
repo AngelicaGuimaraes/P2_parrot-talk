@@ -140,6 +140,10 @@ div .wrong {
     margin-left: 10%;
 }
 
+#score-feedback {
+    color: #ffffff;
+}
+
 /* media queries */
 
 @media screen and (min-width: 480px) and (max-width: 920px) {

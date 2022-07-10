@@ -183,6 +183,7 @@ function showEndPage() {
     correct ? addCorrect() : addIncorrect();
     infoText.innerText = question.info;
     showInfoText(shuffledQuestions[currentQuestionIndex]);
+    scoreArea.classList.add('hide');
     finishButton.classList.remove('hide');
     restartButton.classList.remove('hide');
     //finishButton.addEventListener('click', showEndPage);
@@ -192,6 +193,7 @@ function showEndPage() {
     
     // pulls the final score so that user feedback can be given. Again, the parseInt function is used so that an integer is returned rather than a string
     const finalScore = parseInt(document.getElementById('right').textContent);
+    
     // if statement to provide feedback to the user dependent on their score. Template literals (backticks) are used so that the finalScore variable can be included in the string, as well as providing a less error-prone way of including single quotes inside the string
     if (finalScore > 7) {
         document.getElementById('score-feedback').textContent = `Congratulations! You scored ${finalScore}.`;
@@ -200,7 +202,7 @@ function showEndPage() {
         document.getElementById('score-feedback').textContent = `Not bad! You scored ${finalScore}.`;
         document.getElementById('feedback-text').textContent = 'You have a good level of knowledge!';
     } else {
-        document.getElementById('score-feedback').textContent = `You scored ${finalScore}.`;
+        document.getElementById('score-feedback').textContent = `You scored only ${finalScore} / 10.`;
         document.getElementById('feedback-text').textContent = 'Want to learn more about Brazil?';
     }
 }
