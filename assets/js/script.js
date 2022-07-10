@@ -88,10 +88,10 @@ function selectAnswer(event) {
     const correct = selectedButton.dataset.correct;
     setStatusClass(document.body, correct);
     Array.from(answerOptionsButtons.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
+        setStatusClass(button, button.dataset.correct);
     });
     if (currentQuestionIndex == 9) {
-        showEndPage()
+        showEndPage();
       } else {
         nextButton.classList.remove('hide');
         correct ? addCorrect() : addIncorrect();
