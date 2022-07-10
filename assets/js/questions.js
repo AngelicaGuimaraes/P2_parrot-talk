@@ -85,7 +85,7 @@ const questions = [
             { text: 'Praia do Cassino', correct: true },
             { text: 'Praia Grande', correct: false },
             { text: 'Praia dos Ingleses', correct: false },
-            { text: 'Copacaban', correct: false }
+            { text: 'Copacabana', correct: false }
         ],
         info: '* Praia do Cassino is the longest uninterrupted sandy seashore in the world, located in the southernmost of the Brazilian coast, on the South Atlantic Ocean, in the Rio Grande do Sul state.'
     },
