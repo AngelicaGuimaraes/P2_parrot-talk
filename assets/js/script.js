@@ -194,10 +194,13 @@ function showEndPage() {
     const finalScore = parseInt(document.getElementById('right').textContent);
     // if statement to provide feedback to the user dependent on their score. Template literals (backticks) are used so that the finalScore variable can be included in the string, as well as providing a less error-prone way of including single quotes inside the string
     if (finalScore > 7) {
-        document.getElementById('score-feedback').textContent = `Congratulations! You scored ${finalScore}. You're an expert!`;
+        document.getElementById('score-feedback').textContent = `Congratulations! You scored ${finalScore}.`;
+        document.getElementById('feedback-text').textContent = 'You are an expert!';
     } else if (finalScore > 4) {
-        document.getElementById('score-feedback').textContent = `Not bad! You scored ${finalScore}. You have a good level of knowledge!`;
+        document.getElementById('score-feedback').textContent = `Not bad! You scored ${finalScore}.`;
+        document.getElementById('feedback-text').textContent = 'You have a good level of knowledge!';
     } else {
-        document.getElementById('score-feedback').textContent = `You scored ${finalScore}. Want to learn more about Brazil?`;
+        document.getElementById('score-feedback').textContent = `You scored ${finalScore}.`;
+        document.getElementById('feedback-text').textContent = 'Want to learn more about Brazil?';
     }
 }
