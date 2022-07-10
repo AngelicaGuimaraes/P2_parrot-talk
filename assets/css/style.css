@@ -85,12 +85,10 @@ div .wrong {
 
 #right {
     color: #FFB357;
-    /**font-family: 'Bebas Neue', cursive;**/
 }
 
 #wrong {
     color: #ec6578;
-    /**font-family: 'Bebas Neue', cursive;**/
 }
 
 #right-wrong {
@@ -167,7 +165,7 @@ div .wrong {
         font-size: 4vw;
         display: flex;
         justify-content: center;
-        margin: 5% 10% 0% 10%;
+        margin: 0% 10% 0% 10%;
     }
 
     .btn-option {
@@ -177,7 +175,7 @@ div .wrong {
         font-weight: bold;
         color: #41B3A2;
         width: 50vw;
-        margin-top: 5%;
+        margin-top: 3%;
         margin-left: 1vw;
         margin-right: 1vw;
         padding-top: 16px;
@@ -185,7 +183,7 @@ div .wrong {
     }
 
     #right-wrong {
-        margin-top: 20px;
+        margin-top: 5%;
         font-size: 5vw;
         font-weight: bold;
         font-family: 'Bebas Neue', cursive;
@@ -218,6 +216,27 @@ div .wrong {
 
     #that-was-wrong {
         font-size: 6vw;
+    }
+
+    #score-area {
+        margin-top: 10%;
+    }
+
+    #score-feedback {
+        margin-top: 5%;
+        font-size: 5vw;
+    }
+
+    #feedback-text {
+        margin-top: 3%;
+        font-size: 5vw;
+    }
+
+    #restart-text {
+        margin-top: 3%;
+        font-size: 5vw;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
 }
