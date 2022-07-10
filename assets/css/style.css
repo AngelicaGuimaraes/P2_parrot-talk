@@ -142,6 +142,11 @@ div .wrong {
 
 #score-feedback {
     color: #ffffff;
+    margin-top: 3%;
+}
+
+#score-area {
+    margin-top: 3%;
 }
 
 /* media queries */
@@ -149,18 +154,13 @@ div .wrong {
 @media screen and (min-width: 480px) and (max-width: 920px) {
 
     .parrot-logo {
-        width: 50vw;
+        width: 40vw;
         height: auto;
     }
 
     h2 {
         font-size: 6vw;
         margin: 10% 10%;
-    }
-
-    #start {
-        font-size: 6vw;
-        padding: 16px;
     }
 
     .questions {
@@ -177,7 +177,7 @@ div .wrong {
         font-weight: bold;
         color: #41B3A2;
         width: 50vw;
-        margin-top: 3%;
+        margin-top: 5%;
         margin-left: 1vw;
         margin-right: 1vw;
         padding-top: 16px;
@@ -186,11 +186,40 @@ div .wrong {
 
     #right-wrong {
         margin-top: 20px;
-        font-size: 4vw;
+        font-size: 5vw;
         font-weight: bold;
         font-family: 'Bebas Neue', cursive;
         display: inline;
     }
+
+    #answer-info {
+        display: flex;
+        justify-content: center;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    
+    #info {
+        font-size: 4vw;
+    }
+
+    #start,
+    #next,
+    #finish,
+    #restart {
+        font-size: 6vw;
+        padding: 16px;
+        margin-top: 15%;
+    }
+
+    #you-are-right {
+        font-size: 6vw;
+    }
+
+    #that-was-wrong {
+        font-size: 6vw;
+    }
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 480px) {
