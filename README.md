@@ -238,13 +238,11 @@ This list contains the major bugs. There has been several smaller ones connected
 
 - Lighthouse testing
 
-![Lighthouse testing score](/assets/images/readme-images/lighthouse.png)
+![Lighthouse testing score](/assets/images/screencapture-Lighthouse.png)
 
 ### Unfixed Bugs
 
-- Some test players have experienced that card values get "stuck" if you are playing the game to fast. This requires further investigation.
-
-- On screens with a resolution in height of 290px or less the face value (icons) are visible even if a card is not turned.
+- Last question on the quiz always returns as "right".
 
  [Back to top](#parrot-talk)
 
@@ -267,30 +265,31 @@ The live link can be found here - https://angelicaguimaraes.github.io/parrot-tal
 
 ## Content 
 
-- All text content in this game has been produced by the author.
+- All questions and answers in this quiz have been taken from [Fun Trivia](https://www.funtrivia.com/en/Geography/Brazil-8275.html).
 
 ## Media
 
-Apart from Google Fonts and Flaticon no external media are used in the game.
+Apart from Google Fonts and Flaticon no external media were used in the game.
 
 ## Credits 
 
 ### For code inspiration, design inputs, help and advice.
 
-I have consulted numerous websites, individuals and slack channels to get support for the code. No code block is directly copied but some generates from information I gathered from other developers and sites:
+I have consulted various websites, youtube channels, and slack channels to get inspiration for the code to build the quiz. Some code blocks were copied from other projects that I have gathered from other developers and sites:
 
- - [Mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for information about Arrays and also identifying bugs.
- - [Code Institute - Love Running](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode) for inspiration to game footer.
- - [Code Institute - Love Maths](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode) for inspiration to design of user interface.
- - [DevelopedByEd](https://developedbyed.com/) that taught me in his vides on how to generate a board of cards and display it as a CSS grid.
- - [W3 Schools](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) for understanding Event Listeners. 
- - [W3 Schools](https://www.w3schools.com/w3css/w3css_progressbar.asp) for the developing of my progress bar on the main game screen.
+ - [Mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+ - [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k&ab_channel=WebDevSimplified) 
+ - [Web Dev Simplified](https://www.youtube.com/watch?v=y17RuWkWdn8&t=169s&ab_channel=WebDevSimplified)
+ - [W3 Schools](https://www.w3schools.com/js/js_functions.asp) 
+ - [W3 Schools](https://www.w3schools.com/js/js_array_iteration.asp)
 
 ### Acknowledgment
 
- - [Martina Terlevic](https://www.linkedin.com/in/martinaterlevic/) My fantastic mentor at Code Institute, thank you for your support, feedback and humor.
-
- And to all the rest of my fellow student that have tested the actual game and provided me with feedback on playability.
+ Martina Terlevic
+ - My great mentor at Code Institute: Thank you for your help and patience during this project!
+ 
+ Mats Simonsson
+ - Friend and Mentor: Thank you for all your support, help, time and for the amazing suggestions to make this project look even better!
 
 
 [Back to top](#parrot-talk)
