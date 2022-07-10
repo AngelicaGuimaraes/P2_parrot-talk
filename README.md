@@ -92,15 +92,16 @@ The game consists of three screens. Start, Game and End. The final version of th
 
 Start Screen
 
-![Start Screen](/assets/images/parrot-talk-start.png)
+![Start Screen](/assets/images/screencapture-start-quiz.png)
 
 Game Screen
 
-![Game Screen](/assets/images/parrot-talk-questions.png)
+![Game Screen 1](/assets/images/screencapture-game-screen1.png)
+![Game Screen 2](/assets/images/screencapture-game-screen2.png)
 
 End Screen
 
-![End Screen](/assets/images/readme-images/wireframe-end.jpg)
+![End Screen](/assets/images/screencapture-end-quiz-page.png)
 
 #### Colours
 
@@ -137,7 +138,7 @@ The Start Screen consists of the logo of the quiz, and a paragraph. Other elemen
 
  - Start button that takes the player to the game screen.
 
-![Start Screen](/assets/images/parrot-talk-start.png)
+![Start Screen](/assets/images/screencapture-start-quiz.png)
 
 #### Game Screen
 
@@ -163,7 +164,7 @@ Parrot Talk quiz is a linear game and all players end up at the end screen eithe
  - Restart Quiz button that generates a new game with the same 10 questions shuffled on a different order.
  - Finish button that takes the player to the start screen.
 
-![About us Section part 1](/assets/images/readme-images/end-screen.png)
+![About us Section part 1](/assets/images/screencapture-end-quiz-page.png)
 
 ### Features Left to Implement
 
