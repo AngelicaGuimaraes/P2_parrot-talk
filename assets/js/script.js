@@ -8,21 +8,14 @@ const questionAnswerContainer = document.getElementById("question-answer-contain
 const questionElement = document.getElementById("question-text");
 const answerOptionsButtons = document.getElementById("options-buttons");
 const scoreArea = document.getElementById("score-area");
-const answerInfo = document.getElementById("answer-info");
 const infoText = document.getElementById("info");
 const youAreRight = document.getElementById('you-are-right');
 const thatWasWrong = document.getElementById('that-was-wrong');
-const mainContainer = document.getElementById('main');
 const quizFeedback = document.getElementById("quiz-feedback");
-const feedbackText = document.getElementById("feedback-text");
-const scoreFeedback = document.getElementById("score-feedback");
-const restartText = document.getElementById("restart-text");
-
 
 // define variables to drive quiz
 let shuffledQuestions;
 let currentQuestionIndex;
-let score = 0;
 
 // event listeners
 startButton.addEventListener('click', startQuiz);

@@ -220,16 +220,16 @@ This list contains the major bugs. There has been several smaller ones connected
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpelikantapeten.github.io%2Fp2-quickmem%2F)
+  - No errors were returned when passing through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fangelicaguimaraes.github.io%2Fparrot-talk%2F)
 
-![W3C HTML Validator](/assets/images/readme-images/html-validator.png)
+![W3C HTML Validator](/assets/images/HTML-validator.png)
 
 - CSS
-  - No errors were returned when passing through the official [(Jigsaw validator)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpelikantapeten.github.io%2Fp2-quickmem%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  - No errors were returned when passing through the official [(Jigsaw validator)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fangelicaguimaraes.github.io%2Fparrot-talk%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
   - CSS validation passes with no errors but contains a warning. The warning indicates that the background colour and font colour of the class ”memory-card” are the same. This is on purpose since the game function to check memory cards depend on colour change. 
 
-![Jigsaw validator](/assets/images/readme-images/css-validator.png)
+![Jigsaw validator](/assets/images/CSS-validator.png)
 
 - JavaScript
   - No errors or warnings was returned using [(JSHint)](https://jshint.com/) with "New JavaScript features (ES6)" activated in the configuration.
