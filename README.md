@@ -234,7 +234,7 @@ This list contains the major bugs. There has been several smaller ones connected
 - JavaScript
   - No errors or warnings was returned using [(JSHint)](https://jshint.com/) with "New JavaScript features (ES6)" activated in the configuration.
 
-![JSHint](/assets/images/readme-images/jshint-screen.png)
+![JSHint](/assets/images/JSHint-validator.png)
 
 - Lighthouse testing
 
