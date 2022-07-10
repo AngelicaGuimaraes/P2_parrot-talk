@@ -41,6 +41,9 @@ nextButton.addEventListener('click', () => {
 
 function startQuiz() {
     currentQuestionIndex = 0;
+    infoText.innerHTML = "";
+    restartButton.classList.add('hide');
+    finishButton.classList.add('hide');
     startButton.classList.add('hide');
     helloText.classList.add('hide');
     questionAnswerContainer.classList.remove('hide');
@@ -100,13 +103,24 @@ function selectAnswer(event) {
     Array.from(answerOptionsButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     });
-    shuffledQuestions.length > currentQuestionIndex ? nextButton.classList.remove('hide') : finishQuiz();
-    correct ? addCorrect() : addIncorrect();
-    infoText.classList.remove('hide');
-    answerOptionsButtons.classList.add('hide');
-    restartButton.classList.add('hide');
-    finishButton.classList.add('hide');
-    showInfoText(shuffledQuestions[currentQuestionIndex]);
+    //shuffledQuestions.length > currentQuestionIndex ? nextButton.classList.remove('hide') : finishQuiz();
+    if (currentQuestionIndex == 2) {
+        showEndPage()
+      } else {
+        nextButton.classList.remove('hide');
+        correct ? addCorrect() : addIncorrect();
+        infoText.classList.remove('hide');
+        answerOptionsButtons.classList.add('hide');
+        restartButton.classList.add('hide');
+        finishButton.classList.add('hide');
+        showInfoText(shuffledQuestions[currentQuestionIndex]);
+      }
+    //correct ? addCorrect() : addIncorrect();
+    //infoText.classList.remove('hide');
+    //answerOptionsButtons.classList.add('hide');
+    //restartButton.classList.add('hide');
+    //finishButton.classList.add('hide');
+    //showInfoText(shuffledQuestions[currentQuestionIndex]);
 }
 
 function showInfoText(question) {
@@ -144,23 +158,38 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
     finishButton.classList.remove('hide');
 }
-
+/**
 function finishQuiz() {
-    mainContainer.classList.add('hide');
+    //mainContainer.classList.add('hide');
+    //nextButton.classList.add('hide');
+    answerOptionsButtons.innerHTML = '';
+    //infoText.innerText = question.info;
+    questionElement.innerHTML = "";
+    showInfoText(shuffledQuestions[currentQuestionIndex]);
     finishButton.classList.remove('hide');
     restartButton.classList.remove('hide');
     finishButton.addEventListener('click', showEndPage);
     restartButton.addEventListener('click', startQuiz);
 }
 
+**/
+
 /**
  * displays quiz end page with user's final score and feedback
  */
 function showEndPage() {
-    mainContainer.classList.add('hide');
-    finishButton.classList.add('hide');
-    quizFeedback.classList.remove('hide');
+    questionElement.innerHTML = "";
+    answerOptionsButtons.innerHTML = '';
+    correct ? addCorrect() : addIncorrect();
+    infoText.innerText = question.info;
+    showInfoText(shuffledQuestions[currentQuestionIndex]);
+    finishButton.classList.remove('hide');
     restartButton.classList.remove('hide');
+    //finishButton.addEventListener('click', showEndPage);
+    restartButton.addEventListener('click', startQuiz);
+    quizFeedback.classList.remove('hide');
+
+    
     // pulls the final score so that user feedback can be given. Again, the parseInt function is used so that an integer is returned rather than a string
     const finalScore = parseInt(document.getElementById('right').textContent);
     // if statement to provide feedback to the user dependent on their score. Template literals (backticks) are used so that the finalScore variable can be included in the string, as well as providing a less error-prone way of including single quotes inside the string
@@ -169,6 +198,6 @@ function showEndPage() {
     } else if (finalScore > 4) {
         document.getElementById('score-feedback').textContent = `Not bad! You scored ${finalScore}. You have a good level of knowledge!`;
     } else {
-        document.getElementById('score-feedback').textContent = `You scored ${finalScore}. Want to learn more about women in STEM?`;
+        document.getElementById('score-feedback').textContent = `You scored ${finalScore}. Want to learn more about Brazil?`;
     }
 }
