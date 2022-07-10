@@ -37,8 +37,7 @@ A live version of the project can be found here - https://angelicaguimaraes.gith
     + [End Screen](#end-screen "End Screen")
   + [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
 + [Technologies used](#technologies-used "Technologies used")
-+ [Testing](#testing "Testing")
-  + [Validator Testing](#validator-testing "Validator Testing")
++ [Validator Testing](#validator-testing "Validator Testing")
   + [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
 + [Development and Deployment](#development-and-deployment "Development and Deployment")
 + [Content](#content "Content")
@@ -96,7 +95,7 @@ Start Screen
 
 Game Screen
 
-![Game Screen 1](/assets/images/screencapture-game-screen1.png)
+![Game Screen 1](/assets/images/screencapture-game-screen.png)
 ![Game Screen 2](/assets/images/screencapture-game-screen2.png)
 
 End Screen
@@ -152,7 +151,7 @@ The Game Screen contains:
  - A paragraph containing some information about the right answer that apears when the player clicks the chosen answer button.
  - The next question button that takes the player to the next shuffled question available until it reaches the last question of the list.
 
-![Game Screen 1](/assets/images/screencapture-game-screen1.png)
+![Game Screen 1](/assets/images/screencapture-game-screen.png)
 ![Game Screen 2](/assets/images/screencapture-game-screen2.png)
 
 #### End Screen
@@ -178,45 +177,6 @@ Parrot Talk quiz is a linear game and all players end up at the end screen eithe
 - [CSS](https://en.wikipedia.org/wiki/CSS)
 - [JavaScript](https://en.wikipedia.org/wiki/javascript)
 
-## Testing 
-
-- Initial testing showed that the function I used to create the game cards did not get the correct information from my main game array. The cards was not generated properly. I struggled a lot with this and made several attempts to change the information in the array but nothing seemed to work.
-
-  - The solution to this problem was simpler than I first expected. My Array contains the class names of 10 different FontAwesome icons and my function did not generate any inner HTML in the DIV-tags that are the cards. After a change in the function so that it adds a i-tag with a class attribute from the array solved the issue.
-
-- Game Card not responding to clicks.
-
-  - My event listener was not correct and placed outside the function that generates the cards.
-
-- Console log constantly gave an error due ot missing favicon. I figured that this is either connected to the Code Institute template or to GitPod. 
-
-  - I added the favicon from ”Love Maths” and that removed the error. Later I updated with my own favicon.
-
-- Selected cards do not change colour upon clicks
-
-  - I was not able to correctly identify the correct card (div) and it’s inner HTML. The solution was to get the ID of the selected DIV-tag and change the attribute color using this.getAttribute.
-
-- Game cards did not compare correctly. All cards are considered to be a match.
-
-  - When comparing 0 and 1 in the Array with selected cards all were a match. It took me some time to figure out why. After a console.log I noticed that the value of both cards were set to Object. I tried to convert the entries in the Array to strings and strings became identical as well HTMLObject. I resorted to W3 Schools and found an attribute called data- that could be applied with almost any value. I had to go back to the function that generates the board and added the attribute data-id with the same value as the class name of the icons. This value was then pushed in the array of selected cards and the matchmaking worked.
-
-- Upon restart of the game from the End screen or the scenario End Screen - Quit - Start. The game board consisted of 40 cards instead of 20. For each try it added a new set of cards.
-
-  - I wrote a function that clears all inner HTML for the DIV that is the main game board and called that function upon restart and quit.
-
-- The game card are not re-shuffeling when you press Play Again.
-
-  - The line of code that shuffles and creates the variable cardDeck was not placed inside the function that generates the board. When it was moved there the bug was fixed.
-
-- The End Screen flickers when the timer reaches 100.
-
-  - A loop was created due to badly placed console.log and the fact that the timer restarted in the background. Added a stop to the timer at won game and removed the console.log
-
-- If a player wins a game, plays again and looses the messages is still that one of a win.
-  - Made a function that restores the message and cal the function from the Quit and Play again button.
-
-This list contains the major bugs. There has been several smaller ones connected to misspelled syntaxt and such that has been solved in under 1-2 minutes.
-
 ### Validator Testing 
 
 - HTML
@@ -227,12 +187,10 @@ This list contains the major bugs. There has been several smaller ones connected
 - CSS
   - No errors were returned when passing through the official [(Jigsaw validator)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fangelicaguimaraes.github.io%2Fparrot-talk%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-  - CSS validation passes with no errors but contains a warning. The warning indicates that the background colour and font colour of the class ”memory-card” are the same. This is on purpose since the game function to check memory cards depend on colour change. 
-
 ![Jigsaw validator](/assets/images/CSS-validator.png)
 
 - JavaScript
-  - No errors or warnings was returned using [(JSHint)](https://jshint.com/) with "New JavaScript features (ES6)" activated in the configuration.
+  - Minor error were returned using [(JSHint)](https://jshint.com/) with "New JavaScript features (ES6)" activated in the configuration.
 
 ![JSHint](/assets/images/JSHint-validator.png)
 
@@ -242,7 +200,7 @@ This list contains the major bugs. There has been several smaller ones connected
 
 ### Unfixed Bugs
 
-- Last question on the quiz always returns as "right".
+- Last question on the quiz always returns as "right" to the player.
 
  [Back to top](#parrot-talk)
 
@@ -282,6 +240,7 @@ I have consulted various websites, youtube channels, and slack channels to get i
  - [Web Dev Simplified](https://www.youtube.com/watch?v=y17RuWkWdn8&t=169s&ab_channel=WebDevSimplified)
  - [W3 Schools](https://www.w3schools.com/js/js_functions.asp) 
  - [W3 Schools](https://www.w3schools.com/js/js_array_iteration.asp)
+ - [Frankie Sanjana](https://frankiesanjana.github.io/women-in-STEM-quiz/)
 
 ### Acknowledgment
 
